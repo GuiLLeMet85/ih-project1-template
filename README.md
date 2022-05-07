@@ -5,17 +5,27 @@
 
 ## Description
 
-Game's purpose and description
+The game show a map with the names of countries/continents for 5 seconds. The player must memorize it. 
+
+Then, the following screen show a picture with a part of this map (country or continent). At the bottom, there will be several buttons with all names of the countries/continents that show it before on the map. 
+
+The player has to select the correct option. There are three kinds of puntuations depending the difficulty: Easy, 1 point,  Middle, 2 point and Difficult 3 points. If the player is wrong, 0.5 points are deducted. 
+
+The player has 2 minutes to finish the game. To overcome the game, the playerhas to win the 70% of the possibly points.
 
 ## User stories MVP
 
 Minimum user stories:
 
-- User can ...
+User can:
+- hit play button and see the game screen.
+- do the quiz of countries/continents.
+- see the scoring board on screen
+
 
 ## User stories Backlog
 
-- User can ...
+- User can see a temporitzer.
 
 ## File structure
 
