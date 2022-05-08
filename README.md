@@ -5,7 +5,7 @@
 
 ## Description
 
-The game show a map with the names of countries/continents for 5 seconds. The player must memorize it. 
+The game shows a map with the names of countries/continents for 5 seconds. The player must memorize it. 
 
 Then, the following screen show a picture with a part of this map (country or continent). At the bottom, there will be several buttons with all names of the countries/continents that show it before on the map. 
 
