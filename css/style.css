@@ -76,7 +76,9 @@ details {
 
 #start-page,
 #lose-page,
-#europe-page {
+#europe-page,
+#europe-page-noname
+ {
     height: 700px;
     width: 1200px;
     display: flex;
@@ -96,13 +98,43 @@ details {
     background-color: darkgrey;
 }
 
-#europe-page {
+#europe-page, #europe-page-noname, #lose-page {
     display: none;
 }
 
-#lose-page {
-    display: none;
+.maps {
+    margin:100px auto; 
+    max-width:960px;
+    width:100%;
 }
+
+.map-picture {
+    overflow: hidden;
+    width: 75%;
+    border: 5px solid #FFF;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.map-picture img {
+    width:100%;
+    transform-origin: 65% 75%;
+    transition: transform 4s, filter .5s ease-out;
+}
+.map-picture img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform:scale(2.5); 
+    cursor: zoom-in;
+    
+}
+
+
+
 
 
 /* Auxiliar classes */
@@ -119,23 +151,15 @@ details {
 /* ------- Maps ---------- */
 
 .map-screen {
-    height: 500px;
-    width: 900px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 30px;
-    border-style: 1px solid;
+    background-color: red;
+
 }
 
 .europe-map {
     background-color: aqua;
 }
 
-.europe-map
+
 /* Basic styles, change according to your style */
 
 p {
