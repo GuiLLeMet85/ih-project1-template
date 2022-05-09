@@ -6,17 +6,30 @@
 /* Basic styles, change according to your style */
 
 #start-page,
-#lose-page {
-  height: 600px;
-  width: 1000px;
+#lose-page,
+#europe-map {
+  height: 900px;
+  width: 1500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid black;
   margin-top: 30px;
+}
+
+#start-page {
+  background-color: darkkhaki;
+}
+
+#lose-page {
+  background-color: darkgrey;
+}
+
+#europe-page {
+  background-color: aqua;
+  display: none;
 }
 
 #lose-page {
@@ -39,4 +52,30 @@ canvas {
 
 .shown {
   display: flex;
+}
+
+/* Basic styles, change according to your style */
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  padding: 1vw 3vh;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 4rem;
+}
+
+
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 4vh auto 2vh;
+}
+
+button:hover {
+  background-color: black;
+  color: whitesmoke;
 }
