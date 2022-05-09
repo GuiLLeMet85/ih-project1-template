@@ -1,18 +1,18 @@
-class Game{
-  constructor(context) {
-    this.ctx = context;
-  }
+class Game {
+    constructor() {
 
-  _assignControls() {
- 
-  }
+    }
 
-  _update() {
-    window.requestAnimationFrame(() => this._update());
-  }
+    _assignControls() {
 
-  start() {
-    this._assignControls();
-    this._update();
-  }
+    }
+
+    _update() {
+        window.requestAnimationFrame(() => this._update());
+    }
+
+    start() {
+        this._assignControls();
+        this._update();
+    }
 }

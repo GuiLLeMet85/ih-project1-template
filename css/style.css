@@ -1,81 +1,162 @@
-* {
-  margin: 0;
-  padding: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+header,
+section,
+footer,
+article,
+details {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
 }
+
 
 /* Basic styles, change according to your style */
 
 #start-page,
 #lose-page,
-#europe-map {
-  height: 900px;
-  width: 1500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 30px;
+#europe-page {
+    height: 700px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 #start-page {
-  background-color: darkkhaki;
+    background-color: darkkhaki;
 }
 
 #lose-page {
-  background-color: darkgrey;
+    background-color: darkgrey;
 }
 
 #europe-page {
-  background-color: aqua;
-  display: none;
+    display: none;
 }
 
 #lose-page {
-  display: none;
+    display: none;
 }
 
-canvas {
-  border: 1px solid black;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
 
 /* Auxiliar classes */
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .shown {
-  display: flex;
+    display: flex;
 }
 
+
+/* ------- Maps ---------- */
+
+.map-screen {
+    height: 500px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-style: 1px solid;
+}
+
+.europe-map {
+    background-color: aqua;
+}
+
+.europe-map
 /* Basic styles, change according to your style */
 
 p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
-  padding: 1vw 3vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    padding: 1vw 3vh;
 }
 
 h1 {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 4rem;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 4rem;
 }
 
-
 button {
-  width: 200px;
-  height: 50px;
-  border-radius: 5px;
-  margin: 4vh auto 2vh;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 4vh auto 2vh;
 }
 
 button:hover {
-  background-color: black;
-  color: whitesmoke;
+    background-color: black;
+    color: whitesmoke;
 }
