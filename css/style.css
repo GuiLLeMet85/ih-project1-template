@@ -77,8 +77,7 @@ details {
 #start-page,
 #lose-page,
 #europe-page,
-#europe-page-noname
- {
+#europe-page-noname {
     height: 700px;
     width: 1200px;
     display: flex;
@@ -118,6 +117,7 @@ details {
     align-content: center;
     margin-left: auto;
     margin-right: auto;
+    flex-direction: column;
    
 }
 .map-picture img {
@@ -133,10 +133,17 @@ details {
     
 }
 
+.counter-zone {
+    display: flex;
+    justify-content: center;
+    
+}
 
-
-
-
+.countdown {
+    width: 200px;
+    height: 50px;
+    background-color: bisque;
+}
 /* Auxiliar classes */
 
 .hidden {
@@ -173,14 +180,19 @@ h1 {
     font-size: 4rem;
 }
 
-button {
+button#start {
     width: 200px;
     height: 50px;
     border-radius: 5px;
     margin: 4vh auto 2vh;
 }
 
-button:hover {
+button#start:hover {
     background-color: black;
     color: whitesmoke;
+}
+
+button#skip {
+    width: 200px;
+    height: 50px;
 }

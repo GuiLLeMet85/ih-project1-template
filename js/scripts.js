@@ -7,45 +7,39 @@ window.onload = function() {
     startButton.onclick = function() {
         startPage.style = "display: none";
         europeMap.style = "display: flex";
-        europeMapNoName.style = "display: flex";
+        europeMapNoName.style = "display: none";
         const game = new Game();
         game.start();
     }
 }
 
-window.onload = function (updateClock) {
-    let totalTime = 10;
-    
-        function updateClock() {
-            document.getElementById('countdown').innerHTML = totalTime;
-                if(totalTime==0){
-                    alert('Final');
-                 }else{
-            totalTime-=1;
-        setTimeout("updateClock()",1000);
+
+class CountdownFirstMap {
+    constructor() {
+        this.currentTime = 0;
+        this.intervalId = null;
     }
-}
-}
 
+    start() {
+        this.intervalId = setInterval(this.currentTime-=1,1000);
+    }
+    
+    getSeconds() {
+        return Math.floor(this.currentTime%60);
+    }
 
-
-/*
-function countdownMap {
-
-    if (const getTime = dateTo => {
-        let now = new Date(),
-            minutes = ('0' + Math.floor(time / 60 % 60)).slice(-2),
-           
-     
-        return {
-            minutes
-           
+    computeTwoDigitNumber(value) {
+        const Number = value.toString()
+        if(Number.length === 1 ){
+          return `0${Number}`
+        } else {
+          return Number
         }
-    };)
+      }
 
+    split() {
+        const seconds = this.computeTwoDigitNumber(this.getSeconds())
+        return `${seconds}`
+      }
 
-
-
-}
-
-*/
+} 
