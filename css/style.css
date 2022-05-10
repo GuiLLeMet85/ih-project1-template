@@ -76,8 +76,8 @@ details {
 
 #start-page,
 #lose-page,
-#europe-page,
-#europe-page-noname {
+#learn-page,
+#solve-page {
     height: 700px;
     width: 1200px;
     display: flex;
@@ -97,7 +97,7 @@ details {
     background-color: darkgrey;
 }
 
-#europe-page, #europe-page-noname, #lose-page {
+#learn-page, #solve-page, #lose-page {
     display: none;
 }
 
