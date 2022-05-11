@@ -97,14 +97,16 @@ details {
     background-color: darkgrey;
 }
 
-#learn-page, #solve-page, #lose-page {
+#learn-page,
+#solve-page,
+#lose-page {
     display: none;
 }
 
 .maps {
-    margin:100px auto; 
-    max-width:960px;
-    width:100%;
+    margin: 100px auto;
+    max-width: 960px;
+    width: 100%;
 }
 
 .map-picture {
@@ -118,25 +120,28 @@ details {
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
-   
 }
+
 .map-picture img {
-    width:100%;
+    width: 100%;
     transform-origin: 65% 75%;
     transition: transform 4s, filter .5s ease-out;
 }
+
+
+/*
 .map-picture img:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
     transform:scale(2.5); 
     cursor: zoom-in;
     
 }
+*/
 
 .counter-zone {
     display: flex;
     justify-content: center;
-    
 }
 
 .countdown {
@@ -144,6 +149,8 @@ details {
     height: 50px;
     background-color: bisque;
 }
+
+
 /* Auxiliar classes */
 
 .hidden {
@@ -159,7 +166,6 @@ details {
 
 .map-screen {
     background-color: red;
-
 }
 
 .europe-map {
