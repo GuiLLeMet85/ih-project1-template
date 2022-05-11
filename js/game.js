@@ -22,13 +22,14 @@ class Game {
 
     _showRandomElement() {
         this._showSolvingPage();
-        console.log("Hola que hase");
+        console.log("Hola que hase 1");
         img = new Array()
         img[0] = '/img/france.png';
         img[1] = '/img/norway.png';
         img[2] = '/img/sweden.png';
         ran = Math.floor(3 * Math.random());
-        console.log("Hola que hase");
+        document.write("img src='' +img[ran]+''>")
+        console.log("Hola que hase 2");
     }
 
     start() {
