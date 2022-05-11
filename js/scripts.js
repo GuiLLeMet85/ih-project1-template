@@ -8,7 +8,7 @@ window.onload = function() {
         startPage.style = "display: none";
         learnPage.style = "display: flex";
         solvePage.style = "display: none";
-        const game = new Game(learnPage,solvePage);
+        const game = new Game();
         game.start();
     }
 }
