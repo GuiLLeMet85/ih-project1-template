@@ -1,6 +1,34 @@
 class Game {
     constructor() {
-        this.images = ['/img/france.png', '/img/norway', '/img/sweden.png']
+        this.images = [{
+            src: '/img/france.png',
+            solution: 'france',
+            options: [{
+                option1: "",
+                option2: "",
+                option3: "",
+                option4: ""
+            }],
+
+            src: '/img/norway.png',
+            solution: 'norway',
+            options: [{
+                option1: "",
+                option2: "",
+                option3: "",
+                option4: ""
+            }],
+
+            src: '/img/sweden.png',
+            solution: 'sweden',
+            options: [{
+                option1: "",
+                option2: "",
+                option3: "",
+                option4: ""
+            }],
+
+        }]
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
