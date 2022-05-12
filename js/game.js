@@ -1,6 +1,6 @@
 class Game {
     constructor() {
-        // pensar quines propietats s'hauran de guardar.
+        this.images = ['/img/france.png', '/img/norway','/img/sweden.png']
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
@@ -15,21 +15,24 @@ class Game {
         learnPage.style = "display: none";
         const solvePage = document.getElementById('solve-page');
         solvePage.style = "display: flex";
+        console.log('_showSolvingPage');
+        this._showRandomElement();
     }
 
     //S'ha de guardar totes les imatges en un array.
     //_showRandomElement // triar aleatoriament una de les imatges de mapes i returnar un console.log de la imatge. 
 
     _showRandomElement() {
-        this._showSolvingPage();
-        console.log("Hola que hase 1");
-        img = new Array()
-        img[0] = '/img/france.png';
-        img[1] = '/img/norway.png';
-        img[2] = '/img/sweden.png';
-        ran = Math.floor(3 * Math.random());
-        document.write("img src='' +img[ran]+''>")
-        console.log("Hola que hase 2");
+        
+        console.log('_showRandomElement');
+        
+        function imgRandom() {
+             const countryMap = this.images[Math.floor(Math.random() * this.images.length)];
+             return document.getElementById('country-picture').src = "countryMap";
+            //return document.getElementById('country-picture').innerHTML = 'countryMap';
+        }
+
+     console.log('patata');
     }
 
     start() {
