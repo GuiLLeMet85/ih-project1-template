@@ -41,18 +41,22 @@ class Game {
 
 
     _printSolutions() {
-        const solutions = document.getElementById("solve-page");
+        const solutions = document.getElementById('solve-page');
+        arrayEuroCountriesCountries.forEach(country => createElement('button');button.innerText = country;button.onclick = function() {
+            _checkAnswer();}; solutions.appendchild(btn));
+
+
     // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
     // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
     }
 
 
 
-    //_checkAnswer(answer){
+    _checkAnswer(answer){
             // check si answer === currentmap
             //if si , cridar metode sumPoints
             // if no,  cridar metode lesspoints
-    //}
+   }
 
 
     start() {
