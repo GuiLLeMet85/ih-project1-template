@@ -1,39 +1,22 @@
 class Game {
     constructor() {
-        this.images = [{
+     this.currentMap = [{
             src: '/img/france.png',
             solution: 'france',
-            options: [{
-                option1: "",
-                option2: "",
-                option3: "",
-                option4: ""
-            }],
-
+        },
+        {
             src: '/img/norway.png',
             solution: 'norway',
-            options: [{
-                option1: "",
-                option2: "",
-                option3: "",
-                option4: ""
-            }],
-
+        },
+        {   
             src: '/img/sweden.png',
             solution: 'sweden',
-            options: [{
-                option1: "",
-                option2: "",
-                option3: "",
-                option4: ""
-            }],
-
         }]
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
-        setTimeout(() => { this._showSolvingPage() }, 3000);
+        setTimeout(() => { this._showSolvingPage() }, 4000);
     }
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
@@ -46,14 +29,30 @@ class Game {
         this._showRandomElement();
     }
 
-    //S'ha de guardar totes les imatges en un array.
+    //Save all countries pictures in an array.
     //_showRandomElement // triar aleatoriament una de les imatges de mapes i returnar un console.log de la imatge. 
 
     _showRandomElement() {
-        const countryMap = this.images[Math.floor(Math.random() * this.images.length)];
-        return document.getElementById('country-picture').src = countryMap;
+        const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
+       // this.currentMap = country que estiguem fent de mapa
+        return document.getElementById('country-picture').src = countryMap.src;
         console.log('patata');
     }
+
+
+    _printSolutions() {
+        const solutions = document.getElementById("solve-page");
+    // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
+    // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
+    }
+
+
+
+    //_checkAnswer(answer){
+            // check si answer === currentmap
+            //if si , cridar metode sumPoints
+            // if no,  cridar metode lesspoints
+    //}
 
 
     start() {

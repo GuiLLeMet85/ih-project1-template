@@ -128,6 +128,9 @@ details {
     transition: transform 4s, filter .5s ease-out;
 }
 
+#country-picture {
+    width: 20%;
+}
 
 /*
 .map-picture img:hover {
