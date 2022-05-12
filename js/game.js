@@ -1,6 +1,6 @@
 class Game {
     constructor() {
-        this.images = ['/img/france.png', '/img/norway','/img/sweden.png']
+        this.images = ['/img/france.png', '/img/norway', '/img/sweden.png']
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
@@ -10,7 +10,6 @@ class Game {
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
-        this._hideLearningPage();
         const learnPage = document.getElementById('learn-page');
         learnPage.style = "display: none";
         const solvePage = document.getElementById('solve-page');
@@ -23,17 +22,11 @@ class Game {
     //_showRandomElement // triar aleatoriament una de les imatges de mapes i returnar un console.log de la imatge. 
 
     _showRandomElement() {
-        
-        console.log('_showRandomElement');
-        
-        function imgRandom() {
-             const countryMap = this.images[Math.floor(Math.random() * this.images.length)];
-             return document.getElementById('country-picture').src = "countryMap";
-            //return document.getElementById('country-picture').innerHTML = 'countryMap';
-        }
-
-     console.log('patata');
+        const countryMap = this.images[Math.floor(Math.random() * this.images.length)];
+        return document.getElementById('country-picture').src = countryMap;
+        console.log('patata');
     }
+
 
     start() {
         this._hideLearningPage();
