@@ -1,17 +1,18 @@
 class Game {
     constructor() {
-     this.currentMap = [{
-            src: '/img/france.png',
-            solution: 'france',
-        },
-        {
-            src: '/img/norway.png',
-            solution: 'norway',
-        },
-        {   
-            src: '/img/sweden.png',
-            solution: 'sweden',
-        }]
+        this.currentMap = [{
+                src: '/img/france.png',
+                solution: 'france',
+            },
+            {
+                src: '/img/norway.png',
+                solution: 'norway',
+            },
+            {
+                src: '/img/sweden.png',
+                solution: 'sweden',
+            }
+        ]
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
@@ -35,30 +36,31 @@ class Game {
 
     _showRandomElement() {
         const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
-       // this.currentMap = country que estiguem fent de mapa
+        // this.currentMap = country que estiguem fent de mapa
         return document.getElementById('country-picture').src = countryMap.src;
     }
 
-
     _printSolutions() {
-        console.log ("1_printSolution");
         const solutions = document.getElementById('solve-page');
-        arrayEuroCountries.forEach(country => document.createElement('button'));button.innerText = country;button.onclick = function() {
-        _checkAnswer();}; solutions.appendchild(btn);
-        console.log (solutions)
+        arrayEuroCountries.forEach(country => {
+            let button = document.createElement('button');
+            button.innerText = country;
+            button.onclick = function() {
+                _checkAnswer();
+            };
+            solutions.node.appendChild('button');
+        });
 
-    // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
-    // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
+        // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
+        // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
     }
 
-
-
-    _checkAnswer(answer){
-        console.log ("_checkAnswer")
+    _checkAnswer(country) {
+        console.log("_checkAnswer")
             // check si answer === currentmap
             //if si , cridar metode sumPoints
             // if no,  cridar metode lesspoints
-   }
+    }
 
 
     start() {
