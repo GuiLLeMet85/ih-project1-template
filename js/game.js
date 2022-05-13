@@ -48,7 +48,7 @@ class Game {
             button.onclick = function() {
                 _checkAnswer();
             };
-            solutions.node.appendChild('button');
+            solutions.appendChild(button);
         });
 
         // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
