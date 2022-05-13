@@ -27,6 +27,7 @@ class Game {
         solvePage.style = "display: flex";
         console.log('_showSolvingPage');
         this._showRandomElement();
+        this._printSolutions();
     }
 
     //Save all countries pictures in an array.
@@ -36,15 +37,15 @@ class Game {
         const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
        // this.currentMap = country que estiguem fent de mapa
         return document.getElementById('country-picture').src = countryMap.src;
-        console.log('patata');
     }
 
 
     _printSolutions() {
+        console.log ("1_printSolution");
         const solutions = document.getElementById('solve-page');
-        arrayEuroCountriesCountries.forEach(country => createElement('button');button.innerText = country;button.onclick = function() {
-            _checkAnswer();}; solutions.appendchild(btn));
-
+        arrayEuroCountries.forEach(country => document.createElement('button'));button.innerText = country;button.onclick = function() {
+        _checkAnswer();}; solutions.appendchild(btn);
+        console.log (solutions)
 
     // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
     // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
@@ -53,6 +54,7 @@ class Game {
 
 
     _checkAnswer(answer){
+        console.log ("_checkAnswer")
             // check si answer === currentmap
             //if si , cridar metode sumPoints
             // if no,  cridar metode lesspoints

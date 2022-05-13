@@ -1,2 +1,2 @@
 
-const arrayCountries = ['France', 'Norway', 'Sweden'];
+const arrayEuroCountries = ['France', 'Norway', 'Sweden'];
