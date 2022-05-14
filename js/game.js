@@ -2,17 +2,22 @@ class Game {
     constructor() {
         this.currentMap = [{
                 src: '/img/france.png',
-                solution: 'france',
+                solution: 'France',
+                points: 1
             },
             {
                 src: '/img/norway.png',
-                solution: 'norway',
+                solution: 'Norway',
+                points: 1
             },
             {
                 src: '/img/sweden.png',
-                solution: 'sweden',
+                solution: 'Sweden',
+                points: 1
             }
         ]
+        this.displayedMap = undefined;
+        this.points = 0;
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
@@ -36,7 +41,7 @@ class Game {
 
     _showRandomElement() {
         const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
-        // this.currentMap = country que estiguem fent de mapa
+        this.displayedMap = countryMap;
         return document.getElementById('country-picture').src = countryMap.src;
     }
 
@@ -45,8 +50,8 @@ class Game {
         arrayEuroCountries.forEach(country => {
             let button = document.createElement('button');
             button.innerText = country;
-            button.onclick = function() {
-                _checkAnswer();
+            button.onclick = () => {
+                this._checkAnswer(country);
             };
             solutions.appendChild(button);
         });
@@ -55,11 +60,21 @@ class Game {
         // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
     }
 
+    _showWin(){
+        alert("You rock!!")
+    }
+
     _checkAnswer(country) {
-        console.log("_checkAnswer")
-            // check si answer === currentmap
-            //if si , cridar metode sumPoints
-            // if no,  cridar metode lesspoints
+        if (this.displayedMap.solution == country) {
+            this.points += this.displayedMap.points;
+            this._showRandomElement();
+            if (this.points === 10) {
+                this._showWin();
+            }
+        } else {
+            this.points -= 0.5;
+        }
+        document.getElementById('score').innerText = this.points;
     }
 
 
