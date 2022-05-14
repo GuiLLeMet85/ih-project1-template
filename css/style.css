@@ -78,19 +78,19 @@ details {
 #lose-page,
 #learn-page,
 #solve-page {
-    height: 700px;
-    width: 1200px;
+    height: 90vh;
+    width: 80vw;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
     margin-top: 30px;
+    overflow: hidden;
 }
 
 #start-page {
-    background-color: darkkhaki;
+    background-color: black;
 }
 
 #lose-page {
@@ -102,6 +102,49 @@ details {
 #lose-page {
     display: none;
 }
+
+.box-title-intro {
+    transform: translateY(-5%);
+    color:white
+}
+
+
+#video-intro {
+    max-width: 50vw;
+    max-height: 50vh;
+    margin-top: 9vh;
+    transition: transform .1555s ease;
+    transform: scale(1.5);
+    
+}
+
+.background-animation {
+    animation: scroll 70s linear infinite;
+    background: ur
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    
+  }
+  
+  @keyframes scroll {
+     100%{
+      background-position:0px -3000px;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .background-animation {
+      animation: scroll 200s linear infinite;
+    }
+  }
+
 
 .maps {
     margin: 100px auto;
@@ -131,16 +174,6 @@ details {
 #country-picture {
     width: 20%;
 }
-
-/*
-.map-picture img:hover {
-    -ms-transform: scale(1.5); 
-    -webkit-transform: scale(1.5); 
-    transform:scale(2.5); 
-    cursor: zoom-in;
-    
-}
-*/
 
 .counter-zone {
     display: flex;
@@ -195,6 +228,8 @@ button#start {
     border-radius: 5px;
     margin: 4vh auto 2vh;
 }
+
+
 
 button#start:hover {
     background-color: black;
