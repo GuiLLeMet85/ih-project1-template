@@ -11,7 +11,7 @@
 
 ## Process:
 
-1. Draw your idea & define your game goals: one version for the MVP and one version for the backlog
+1. Draw your idea button define your game goals: one version for the MVP and one version for the backlog
 2. Update your <code>README.md</code> file with this information
 3. Create a project on Github and create an issue card with each one of the user stories
 4. Start coding your game. Remember to commit <em>all the time</em>

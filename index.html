@@ -7,28 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <title>The map game</title>
 </head>
 
 <body>
+
+<!---------------------------------- START PAGE ---------------------------------->
         <div id="start-page" class="background-animation">
             <main>
                 <video autoplay muted loop id="video-intro">
                         <source src="/video/Planet - 4077.mp4" type="video/mp4">
                 </video>
                 <div class = "box-title-intro">
-                        <p>This is... </p>
-                        <h1>The super map game</h1>
-                        <button id="start">START</button>
+                            <p>This is... </p>
+                            <h1>The super map game</h1>
+                        <div class="box-for-star">
+                            <button id="howto">How to play</button>
+                        </div>
                 </div>
                 
                 </main>
             
             </main>
         </div>
-
+<!---------------------------------- INSTRUCTION PAGE ---------------------------------->
+        <div id="intructions-page">
+            <atricle>
+                <h2>Instruccions to play:</h2>
+                <ul>
+                    <li>The playe has 1 minute to memorize the highest countries.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>In vel purus tincidunt, porta metus a, condimentum nisl.</li>
+                    <li>Duis iaculis dolor eu tortor varius lobortis in et tellus.</li>
+                    <li>Nam fringilla mauris at gravida euismod.</li>
+                </ul>
+            </atricle>
+            <div class="box-for-star">
+                <button id="start">START</button>
+            </div>
+        </div>
+ <!---------------------------------- LEARN PAGE ---------------------------------->
         <div id="learn-page" class="maps">
             <main>
                 <h2>Europe map</h2>
@@ -48,7 +70,7 @@
                     </div>
             </main>
             </div>
-        
+ <!---------------------------------- SOLVE PAGE ---------------------------------->
         <div id="solve-page" class="maps">
             <main>
                 <h2 class="header-2"></h2>
@@ -66,12 +88,13 @@
                 <button id="restart">RESTART</button>
             </main>
         </div>
-            <div id="lose-page">
-                <main>
-                    <h1>YOU LOSE SUCKER</h1>
-                </main>
+ <!---------------------------------- LOSE PAGE ---------------------------------->        
+        <div id="lose-page">
+            <main>
+                <h1>YOU LOSE SUCKER</h1>
+            </main>
 
-            </div>
+        </div>
         <script src="js/assets.js"></script>
         <script src="js/game.js"></script>
         <script src="js/scripts.js"></script>
