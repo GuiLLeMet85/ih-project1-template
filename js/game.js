@@ -20,6 +20,8 @@ class Game {
         this.points = 0;
     }
 
+
+
     instuctionPage () {
         const learnPage = document.getElementById('start-page');
         learnPage.style = "display: none";
@@ -30,16 +32,15 @@ class Game {
 
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
-        setTimeout(() => { this._showSolvingPage() }, 60000);
+        setTimeout(() => { this._showSolvingPage() }, 4000);
     }
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
-        const learnPage = document.getElementById('intructions-page');
+        const learnPage = document.getElementById('learn-page');
         learnPage.style = "display: none";
         const solvePage = document.getElementById('solve-page');
         solvePage.style = "display: flex";
-        console.log('_showSolvingPage');
         this._showRandomElement();
         this._printSolutions();
     }
@@ -84,14 +85,12 @@ class Game {
         }
         document.getElementById('score').innerText = this.points;
     }
-
-
     start() {
         this._hideLearningPage();
     }
 
     howTo() {
-        this._hideLearningPage();
+        this.instuctionPage();
     }
 
 }

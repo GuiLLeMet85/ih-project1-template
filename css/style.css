@@ -102,7 +102,28 @@ body {
     border-radius: 5%;
 }
 
-#start-page, #learn-page, #intructions-page {
+
+
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+}
+  
+article:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+#start-page, #learn-page, #intructions-page, #solve-page {
     background-color: black;
 }
 
@@ -121,24 +142,21 @@ body {
     color: white;
     z-index: 999;
     position: relative;
-    margin-top: 2vh;
+    margin-top: -2vh;
 } 
 .box-for-star {
     display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	transform: rotatex(10deg);
 	animation: rotateAngle 6s linear infinite;
 }
 
-
 #video-intro {
     max-width: 50vw;
     max-height: 50vh;
-    margin-top: 9vh;
+    margin-top: 7vh;
     transform: scale(1.5);
 }
-
-
 
 #country-picture {
     width: 20%;
@@ -166,6 +184,15 @@ body {
     display: flex;
 }
 
+/* ------- list ---------- */
+li {
+    color: white;
+    list-style: none;
+    font-size: 2.5em;
+    padding: 1.5vh 1.5vw;
+    font-weight: 300;
+    font-family: 'Fredericka the Great', cursive;
+}
 
 /* ------- Maps ---------- */
 
@@ -192,6 +219,10 @@ body {
     transition: transform 4s, filter .5s ease-out;
 }
 
+.map-picture img:hover {
+    transform: scale(1.5);
+}
+
 
 /* Basic styles, change according to your style */
 
@@ -209,9 +240,14 @@ h1 {
 
 /* Buttons style */
 
-button#start {
+button#start, button#howto {
     width: 20vw;
     margin: 4vh auto;
+}
+
+
+button#start {
+    background-color:cyan;
 }
 
 

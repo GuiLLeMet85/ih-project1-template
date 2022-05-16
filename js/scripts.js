@@ -8,7 +8,7 @@ window.onload = function() {
 
     howToButton.onclick = function() {
         startPage.style = "display: none";
-        instuctionPage = "display: flex";
+        instuctionPage.style = "display: flex";
         learnPage.style = "display: none";
         solvePage.style = "display: none";
         const game = new Game();
@@ -17,7 +17,7 @@ window.onload = function() {
 
     startButton.onclick = function() {
         startPage.style = "display: none";
-        instuctionPage = "display: none";
+        instuctionPage.style = "display: none";
         learnPage.style = "display: flex";
         solvePage.style = "display: none";
         const game = new Game();
