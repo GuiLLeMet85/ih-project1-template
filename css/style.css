@@ -152,8 +152,8 @@ article:nth-child(1) {
     justify-content: flex-end;
     display: flex;
     flex-direction: row;
-    transform: rotatex(10deg);
-    /* animation: rotateAngle 6s linear infinite;*/
+    transform: rotatex(20deg);
+    animation: rotateAngle 6s linear infinite;
     align-items: baseline;
     position: absolute;
     right: 0;
@@ -179,22 +179,6 @@ article:nth-child(1) {
 #country-picture {
     width: 20%;
 }
-
-.counter-zone {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 35%;
-    background-color: red;
-    z-index: 1;
-}
-
-.countdown {
-    width: 200px;
-    height: 50px;
-    background-color: bisque;
-}
-
 
 /* Auxiliar classes */
 
@@ -270,6 +254,11 @@ li {
     font-family: 'Fredericka the Great', cursive;
 }
 
+span {
+    mix-blend-mode: none;
+    display: block;
+}
+
 /* Colors style */
 
 .white {
@@ -297,6 +286,17 @@ button#start,
 button#howto {
     width: 20vw;
     margin: 4vh auto;
+}
+
+button#play, button#back {
+    width: 48%;
+}
+button#play {
+    margin-right: 1%;
+}
+
+button#back {
+    margin-left: 1%;
 }
 
 button#start {
@@ -339,10 +339,6 @@ button:after {
     transform: translate3d( calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
 }
 
-span {
-    mix-blend-mode: none;
-    display: block;
-}
 
 button:after {
     background-color: #5D00FF;
@@ -419,4 +415,52 @@ button:hover:after {
 }
 
 /* learn page */
+
+.top-counter {
+    margin: 1vh 0;
+    height: 10%;
+}
+.counter-zone {
+    width: 35%;
+    z-index: 1;
+}
+.seconds {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.countdown {
+    margin: 1vh 0;
+    padding: 0.8em 2.2em;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 0.4em;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 0.04em;
+    mix-blend-mode: color-dodge;
+}
+
+.solution-buttons {
+    width: 100%;
+    background-color: #5D00FF;
+    display: flex;
+    align-items: stretch;
+    height: 77%;
+    margin: 1vh 0;
+    border-radius: 0.4em;
+}
+
+.bottom-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1vh 0;
+    height: 10%;
+    
+}
+
 
