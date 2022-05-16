@@ -1,7 +1,11 @@
 window.onload = function() {
     const startPage = document.getElementById('start-page');
     const howToButton = document.getElementById('howto');
+    //const startButton = (document.document.querySelectorAll('start'),document.getElementById('start2'));
+    //const startButton = document.querySelectorAll('#start, #start2');
     const startButton = document.getElementById('start');
+    //const startButton = document.querySelectorAll('#start, #start2');
+
     const instuctionPage = document.getElementById('intructions-page');
     const learnPage = document.getElementById('learn-page');
     const solvePage = document.getElementById('solve-page');

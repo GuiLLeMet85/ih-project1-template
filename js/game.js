@@ -32,7 +32,7 @@ class Game {
 
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
-        setTimeout(() => { this._showSolvingPage() }, 40000);
+        setTimeout(() => { this._showSolvingPage() }, 40000000);
     }
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
