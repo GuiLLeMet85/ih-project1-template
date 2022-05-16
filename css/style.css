@@ -252,6 +252,22 @@ li {
     font-family: 'Fredericka the Great', cursive;
 }
 
+/* Colors style */
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+
+/* Paddings style */
+
+.padding-bot {
+    padding: 1vh 1vw 3vh;
+}
 
 /* Buttons style */
 
@@ -381,19 +397,3 @@ button:hover:after {
 }
 
 
-/* Colors style */
-
-.white {
-    color: white;
-}
-
-.black {
-    color: black;
-}
-
-
-/* Paddings style */
-
-.padding-h2 {
-    padding: 1vh 1vw 3vh;
-}
