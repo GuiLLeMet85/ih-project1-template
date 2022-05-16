@@ -22,7 +22,7 @@ class Game {
 
 
 
-    instuctionPage () {
+    instuctionPage() {
         const learnPage = document.getElementById('start-page');
         learnPage.style = "display: none";
         const solvePage = document.getElementById('intructions-page');
@@ -32,7 +32,7 @@ class Game {
 
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
-        setTimeout(() => { this._showSolvingPage() }, 4000);
+        setTimeout(() => { this._showSolvingPage() }, 40000);
     }
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
@@ -69,7 +69,7 @@ class Game {
         // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
     }
 
-    _showWin(){
+    _showWin() {
         alert("You rock!!")
     }
 

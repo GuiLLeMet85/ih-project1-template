@@ -75,14 +75,14 @@ details {
 /* Basic styles, change according to your style */
 
 html {
-	height: 100%;
-	display: flex;
+    height: 100%;
+    display: flex;
 }
 
 body {
-	position: relative;
-	margin: auto;
-	perspective: 500px;
+    position: relative;
+    margin: auto;
+    perspective: 500px;
 }
 
 #start-page,
@@ -92,28 +92,26 @@ body {
 #solve-page {
     height: 90vh;
     width: 80vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
     margin: 0 auto;
-    margin-top: 30px;
-    overflow: hidden;
+    margin-top: 2vh;
     border-radius: 5%;
+    overflow: hidden;
+    padding: 2vh 2vw;
 }
-
-
-
 
 article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: normal;
+    margin: auto;
 }
-  
+
+
+/*
 article:nth-child(1) {
     display: block;
     flex-grow: 0;
@@ -122,8 +120,12 @@ article:nth-child(1) {
     align-self: auto;
     order: 0;
 }
+*/
 
-#start-page, #learn-page, #intructions-page, #solve-page {
+#start-page,
+#learn-page,
+#intructions-page,
+#solve-page {
     background-color: black;
 }
 
@@ -140,22 +142,30 @@ article:nth-child(1) {
 
 .box-title-intro {
     color: white;
-    z-index: 999;
     position: relative;
-    margin-top: -2vh;
-} 
+    padding: 2vh 1vw;
+    margin-top: -5vh;
+}
+
 .box-for-star {
+    justify-content: flex-end;
     display: flex;
-	flex-direction: row;
-	transform: rotatex(10deg);
-	animation: rotateAngle 6s linear infinite;
+    flex-direction: row;
+    transform: rotatex(10deg);
+    /* animation: rotateAngle 6s linear infinite;*/
+    align-items: baseline;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 1vh;
+    margin: 4vh auto;
 }
 
 #video-intro {
     max-width: 50vw;
     max-height: 50vh;
-    margin-top: 7vh;
-    transform: scale(1.5);
+    transform: scale(1.25);
+    padding: 2vh 1vw;
 }
 
 #country-picture {
@@ -184,15 +194,6 @@ article:nth-child(1) {
     display: flex;
 }
 
-/* ------- list ---------- */
-li {
-    color: white;
-    list-style: none;
-    font-size: 2.5em;
-    padding: 1.5vh 1.5vw;
-    font-weight: 300;
-    font-family: 'Fredericka the Great', cursive;
-}
 
 /* ------- Maps ---------- */
 
@@ -237,19 +238,32 @@ h1 {
     font-size: 4rem;
 }
 
+h2 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2.5rem;
+}
+
+li {
+    color: white;
+    list-style: none;
+    font-size: 1.75em;
+    padding: 1.5vh 1.5vw;
+    font-weight: 300;
+    font-family: 'Fredericka the Great', cursive;
+}
+
 
 /* Buttons style */
 
-button#start, button#howto {
+button#start,
+button#howto {
     width: 20vw;
     margin: 4vh auto;
 }
 
-
 button#start {
-    background-color:cyan;
+    background-color: cyan;
 }
-
 
 button {
     display: block;
@@ -270,52 +284,50 @@ button {
     transform-style: preserve-3d;
 }
 
-    button:before, button:after {
-        --z: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        content: '';
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        mix-blend-mode: inherit;
-        border-radius: inherit;
-        transform-style: preserve-3d;
-        transform: translate3d(
-            calc(var(--z) * 0px), 
-            calc(var(--z) * 0px), 
-            calc(var(--z) * 0px)
-        );
-    } 
-    span {
-        mix-blend-mode: none;
-        display: block;
-    }
-    
-    button:after {
-        background-color: #5D00FF;
-    }
-    
-    button:before {
-        background-color: #FF1731;
-    }
-    
-    button:hover {
-        background-color: #FFF65B;
-        transition: background-color .3s 0.1s;
-    }
-    
-    button:hover:before {
-        --z: 0.04;
-        animation: translateWobble 2.2s ease forwards;
-    }
-    
-    button:hover:after {
-        --z: -0.06;
-        animation: translateWobble 2.2s ease forwards;
-    }
+button:before,
+button:after {
+    --z: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    mix-blend-mode: inherit;
+    border-radius: inherit;
+    transform-style: preserve-3d;
+    transform: translate3d( calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+}
+
+span {
+    mix-blend-mode: none;
+    display: block;
+}
+
+button:after {
+    background-color: #5D00FF;
+}
+
+button:before {
+    background-color: #FF1731;
+}
+
+button:hover {
+    background-color: #FFF65B;
+    transition: background-color .3s 0.1s;
+}
+
+button:hover:before {
+    --z: 0.04;
+    animation: translateWobble 2.2s ease forwards;
+}
+
+button:hover:after {
+    --z: -0.06;
+    animation: translateWobble 2.2s ease forwards;
+}
 
 @keyframes rotateAngle {
     0% {
@@ -338,64 +350,50 @@ button {
 }
 
 @keyframes translateWobble {
-  0% {
+    0% {
         opacity: 0;
-        transform: translate3d(
-            calc(var(--z) * 0px), 
-            calc(var(--z) * 0px), 
-            calc(var(--z) * 0px)
-        );
-  }
-  16% {
-        transform: translate3d(
-            calc(var(--z) * 160px), 
-            calc(var(--z) * 160px), 
-            calc(var(--z) * 160px)
-        );
-  }
-  28% {
+        transform: translate3d( calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+    }
+    16% {
+        transform: translate3d( calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
+    }
+    28% {
         opacity: 1;
-        transform: translate3d(
-            calc(var(--z) * 70px), 
-            calc(var(--z) * 70px), 
-            calc(var(--z) * 70px)
-        );
-  }
-  44% {
-        transform: translate3d(
-            calc(var(--z) * 130px), 
-            calc(var(--z) * 130px), 
-            calc(var(--z) * 130px)
-        );
-  }
-  59% {
-        transform: translate3d(
-            calc(var(--z) * 85px), 
-            calc(var(--z) * 85px), 
-            calc(var(--z) * 85px)
-        );
-  }
-  73% {
-        transform: translate3d(
-            calc(var(--z) * 110px), 
-            calc(var(--z) * 110px), 
-            calc(var(--z) * 110px)
-        );
-  }
+        transform: translate3d( calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
+    }
+    44% {
+        transform: translate3d( calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
+    }
+    59% {
+        transform: translate3d( calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
+    }
+    73% {
+        transform: translate3d( calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
+    }
     88% {
         opacity: 1;
-        transform: translate3d(
-            calc(var(--z) * 90px), 
-            calc(var(--z) * 90px), 
-            calc(var(--z) * 90px)
-        );
-  }
-  100% {
+        transform: translate3d( calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
+    }
+    100% {
         opacity: 1;
-        transform: translate3d(
-            calc(var(--z) * 100px), 
-            calc(var(--z) * 100px), 
-            calc(var(--z) * 100px)
-        );
-  }
+        transform: translate3d( calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
+    }
+}
+
+
+/* Colors style */
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+
+/* Paddings style */
+
+.padding-h2 {
+    padding: 1vh 1vw 3vh;
 }
