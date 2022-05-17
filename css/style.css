@@ -84,6 +84,7 @@ body {
     margin: auto;
     perspective: 500px;
     background-color: cyan;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 #start-page,
@@ -110,18 +111,6 @@ article {
     align-content: normal;
     margin: auto;
 }
-
-
-/*
-article:nth-child(1) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-}
-*/
 
 #start-page,
 #learn-page,
@@ -204,7 +193,6 @@ article:nth-child(1) {
 .map-picture {
     display: flex;
     align-content: center;
-    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     width: 65%;
@@ -236,22 +224,19 @@ p {
 }
 
 h1 {
-    font-family: 'Fredericka the Great', cursive;
     font-size: 4rem;
 }
 
 h2 {
-    font-family: 'Fredericka the Great', cursive;
     font-size: 2.5rem;
 }
 
 li {
     color: white;
     list-style: none;
-    font-size: 1.75em;
+    font-size: 1.50em;
     padding: 1.5vh 1.5vw;
     font-weight: 300;
-    font-family: 'Fredericka the Great', cursive;
 }
 
 span {
@@ -282,8 +267,7 @@ span {
 
 /* Buttons style */
 
-button#start,
-button#howto {
+button#start{
     width: 20vw;
     margin: 4vh auto;
 }
@@ -443,7 +427,7 @@ button:hover:after {
     mix-blend-mode: color-dodge;
 }
 
-.solution-buttons {
+#instructions {
     width: 100%;
     background-color: #5D00FF;
     display: flex;
@@ -451,6 +435,7 @@ button:hover:after {
     height: 77%;
     margin: 1vh 0;
     border-radius: 0.4em;
+    display: none;
 }
 
 .bottom-buttons {

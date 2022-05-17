@@ -21,23 +21,18 @@ class Game {
     }
 
 
-
-    instuctionPage() {
-        const learnPage = document.getElementById('start-page');
-        learnPage.style = "display: none";
-        const solvePage = document.getElementById('intructions-page');
-        solvePage.style = "display: flex";
-    }
-
-
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
-        setTimeout(() => { this._showSolvingPage() }, 40000000);
+        const instructions = document.getElementById('instructions');
+        instructions.style = "display: flex";
+        setTimeout(() => { this._showSolvingPage() }, 6000);
     }
+
+  
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
-        const learnPage = document.getElementById('learn-page');
+        const learnPage = document.getElementById('start-page');
         learnPage.style = "display: none";
         const solvePage = document.getElementById('solve-page');
         solvePage.style = "display: flex";
@@ -89,8 +84,9 @@ class Game {
         this._hideLearningPage();
     }
 
-    howTo() {
-        this.instuctionPage();
+    play() {
+        const playButton = document.getElementById('play');
+        this._showSolvingPage();
     }
 
 }

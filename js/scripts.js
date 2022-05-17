@@ -1,30 +1,25 @@
 window.onload = function() {
     const startPage = document.getElementById('start-page');
-    const howToButton = document.getElementById('howto');
-    //const startButton = (document.document.querySelectorAll('start'),document.getElementById('start2'));
-    //const startButton = document.querySelectorAll('#start, #start2');
     const startButton = document.getElementById('start');
-    //const startButton = document.querySelectorAll('#start, #start2');
-
-    const instuctionPage = document.getElementById('intructions-page');
     const learnPage = document.getElementById('learn-page');
     const solvePage = document.getElementById('solve-page');
-
-    howToButton.onclick = function() {
-        startPage.style = "display: none";
-        instuctionPage.style = "display: flex";
-        learnPage.style = "display: none";
-        solvePage.style = "display: none";
-        const game = new Game();
-        game.howTo();
-    }
+    const instructions = document.getElementById('instructions');
+    const playButton = document.getElementById('play');
 
     startButton.onclick = function() {
         startPage.style = "display: none";
-        instuctionPage.style = "display: none";
         learnPage.style = "display: flex";
         solvePage.style = "display: none";
         const game = new Game();
         game.start();
+    }
+
+    playButton.onclick = function() {
+        startPage.style = "display: none";
+        learnPage.style = "display: none";
+        instructions = "display: none";
+        solvePage.style = "display: flex";
+        const play = new Game();
+        game.play();
     }
 }
