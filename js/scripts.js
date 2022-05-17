@@ -5,6 +5,7 @@ window.onload = function() {
     const solvePage = document.getElementById('solve-page');
     const instructions = document.getElementById('instructions');
     const playButton = document.getElementById('play');
+    const backButton = document.getElementById('back');
 
     startButton.onclick = function() {
         startPage.style = "display: none";
@@ -18,7 +19,15 @@ window.onload = function() {
         startPage.style = "display: none";
         learnPage.style = "display: none";
         solvePage.style = "display: flex";
+        const game = new Game();
+        game.play();
+    }
 
-
+    backButton.onclick = function() {
+        startPage.style = "display: block";
+        learnPage.style = "display: none";
+        solvePage.style = "display: none";
+        const game = new Game();
+        game.start();
     }
 }

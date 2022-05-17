@@ -184,9 +184,6 @@ class Game {
                 solution: 'Cyprus',
                 points: 3
             }
-
-
-
         ]
         this.displayedMap = undefined;
         this.points = 0;
@@ -196,6 +193,16 @@ class Game {
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
         setTimeout(() => { this._showSolvingPage() }, 6000);
+        this._chronometer();
+    }
+
+    _chronometer() {
+       const intervalId = setInterval(() => {
+        document.getElementById('secUni').innerText = counter;
+        counter -= 1;
+         },1000 );  
+         let counter = 6;
+         setTimeout(()=> {clearInterval(intervalId)}, 6000); 
     }
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
@@ -211,23 +218,27 @@ class Game {
     }
 
     //Save all countries pictures in an array.
-    //_showRandomElement // triar aleatoriament una de les imatges de mapes i returnar un console.log de la imatge. 
 
     _showRandomElement() {
         const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
-        this.displayedMap = countryMap;
-        return document.getElementById('country-picture').src = countryMap.src;
+       this.displayedMap = countryMap;
+       return document.getElementById('country-picture').src = countryMap.src;
     }
 
     _printSolutions() {
         const solutions = document.getElementById('posible-solutions');
-        arrayEuroCountries.forEach(country => {
+        arrayEuroCountries.forEach((country, i) => {
             let button = document.createElement('button');
             button.innerText = country;
             button.onclick = () => {
                 this._checkAnswer(country);
             };
             solutions.appendChild(button);
+            if (i%2 !== 0) {
+                const breakLine = document.createElement('br');
+                breakLine.classList.add('breakLine');
+                solutions.appendChild(breakLine);
+            }
         });
 
         // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
@@ -238,16 +249,30 @@ class Game {
         alert("You rock!!")
     }
 
+    _showLose() {
+        alert("You need to study!")
+    }
+
     _checkAnswer(country) {
         if (this.displayedMap.solution == country) {
             this.points += this.displayedMap.points;
             this._showRandomElement();
-            if (this.points === 10) {
+            if (this.points >= 70) {
+                this._showWin();
+
+            }
+            else if (this.points >= 40){
                 this._showWin();
             }
-        } else {
-            this.points -= 0.5;
+            //else if (this.points < 40){
+            //    this._showLose();
+            //} 
         }
+            else {
+            this.points -= 0.5;
+            }
+        
+        
         document.getElementById('score').innerText = this.points;
     }
     start() {

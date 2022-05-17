@@ -71,7 +71,6 @@ details {
     vertical-align: baseline;
 }
 
-
 /* Basic styles, change according to your style */
 
 html {
@@ -166,9 +165,8 @@ article {
 }
 
 #country-picture {
-    width: 20%;
+    width: 50%;
 }
-
 
 /* Auxiliar classes */
 
@@ -179,7 +177,6 @@ article {
 .shown {
     display: flex;
 }
-
 
 /* ------- Maps ---------- */
 
@@ -196,10 +193,18 @@ article {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 65%;
     margin: 0;
     transition: transform 4s, filter .5s ease-out;
 }
+
+#learn-page .map-picture {
+    width: 65%;
+}
+
+#solve-page .map-picture {
+    width: 50%;
+}
+
 
 .map-picture:hover {
     transform: scale(1.3);
@@ -210,15 +215,6 @@ article {
     transform-origin: 65% 75%;
     transition: transform 4s, filter .5s ease-out;
 }
-
-
-/*
-.map-picture img:hover {
-    transform: scale(1.3);
-}
-
-*/
-
 
 /* Basic styles, change according to your style */
 
@@ -237,7 +233,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.15rem;
 }
 
 li {
@@ -253,7 +249,6 @@ span {
     display: block;
 }
 
-
 /* Colors style */
 
 .white {
@@ -264,7 +259,6 @@ span {
     color: black;
 }
 
-
 /* Paddings style */
 
 .padding-bot {
@@ -274,7 +268,6 @@ span {
 .padding-onevx {
     padding: 1vh 1vw;
 }
-
 
 /* Buttons style */
 
@@ -298,6 +291,12 @@ button#play {
 
 button#start {
     background-color: cyan;
+}
+
+#posible-solutions button{
+    width: 120px;
+    font-size: 0.7rem;
+     
 }
 
 button {
@@ -410,7 +409,6 @@ button:hover:after {
     }
 }
 
-
 /* learn page */
 
 .top-counter {
@@ -418,8 +416,13 @@ button:hover:after {
     height: 10%;
 }
 
-.counter-zone {
+#learn-page .counter-zone {
     width: 35%;
+    z-index: 1;
+}
+
+#solve-page .counter-zone {
+    width: 50%;
     z-index: 1;
 }
 
@@ -437,10 +440,14 @@ button:hover:after {
     border: none;
     border-radius: 0.4em;
     text-transform: uppercase;
-    font-size: 1.4em;
-    font-family: 'Fredericka the Great', cursive;
     letter-spacing: 0.04em;
 }
+
+#solve-page .countdown, #solve-page .countdown {
+    width: 50%;
+}
+
+
 
 #instructions {
     width: 100%;
@@ -460,3 +467,17 @@ button:hover:after {
     margin: 1vh 0;
     height: 10%;
 }
+
+.number {
+    font-size: 0.9rem;
+}
+
+#posible-solutions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.breakLine {
+    height: 10px;
+} 
