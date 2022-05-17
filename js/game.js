@@ -28,12 +28,12 @@ class Game {
         setTimeout(() => { this._showSolvingPage() }, 6000);
     }
 
-  
+
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
-        const learnPage = document.getElementById('start-page');
-        learnPage.style = "display: none";
+        const startPage = document.getElementById('start-page');
+        startPage.style = "display: none";
         const solvePage = document.getElementById('solve-page');
         solvePage.style = "display: flex";
         this._showRandomElement();
@@ -87,6 +87,9 @@ class Game {
     play() {
         const playButton = document.getElementById('play');
         this._showSolvingPage();
+    }
+    back() {
+
     }
 
 }

@@ -142,6 +142,7 @@ article {
     display: flex;
     flex-direction: row;
     transform: rotatex(20deg);
+    animation: rotateAngle 6s linear infinite;
     align-items: baseline;
     position: absolute;
     right: 0;
@@ -232,17 +233,13 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
-}
-
-h3 {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
 }
 
 li {
     color: white;
     list-style: none;
-    font-size: 1.25em;
+    font-size: 1.50em;
     padding: 1.5vh 1.5vw;
     font-weight: 300;
 }
@@ -287,12 +284,12 @@ button#back {
     width: 48%;
 }
 
-button#back {
-    margin-right: 2%;
+button#play {
+    margin-right: 1%;
 }
 
-button#play {
-    margin-left: 2%;
+button#back {
+    margin-left: 1%;
 }
 
 button#start {
@@ -303,7 +300,7 @@ button {
     display: block;
     position: relative;
     margin: 0.5em 0;
-    padding: 1vh 1vw;
+    padding: .8em 2.2em;
     cursor: pointer;
     background: #FFFFFF;
     border: none;
@@ -439,11 +436,12 @@ button:hover:after {
     font-size: 1.4em;
     font-family: 'Fredericka the Great', cursive;
     letter-spacing: 0.04em;
+    mix-blend-mode: color-dodge;
 }
 
 #instructions {
     width: 100%;
-    background-color: #5D00FF;
+    background-color: cyan;
     display: flex;
     align-items: stretch;
     height: 77%;

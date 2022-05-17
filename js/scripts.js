@@ -17,9 +17,8 @@ window.onload = function() {
     playButton.onclick = function() {
         startPage.style = "display: none";
         learnPage.style = "display: none";
-        instructions = "display: none";
+        instructions.style = "display: none";
         solvePage.style = "display: flex";
-        const play = new Game();
-        game.play();
+
     }
 }
