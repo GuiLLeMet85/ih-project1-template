@@ -157,7 +157,8 @@ article {
     padding: 2vh 1vw;
 }
 
-#learn-page main {
+#learn-page main,
+#solve-page main {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -449,7 +450,6 @@ button:hover:after {
     height: 77%;
     margin: 1vh 0;
     border-radius: 0.4em;
-    display: none;
 }
 
 .bottom-buttons {

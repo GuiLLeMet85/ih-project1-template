@@ -1,2 +1,2 @@
 // Array countries
-const arrayEuroCountries = ['France', 'Norway', 'Sweden'];
+const arrayEuroCountries = ['France', 'Norway', 'Sweden', 'Germany', 'Spain', 'Italy', 'Andorra', 'Netherlands', 'United Kingdom', 'Ireland', 'Poland', 'Switzerland', 'Finland', 'Czech Republic', 'Greece', 'Austria', 'Slovakia', 'Slovenia', 'Montenegro', 'Serbia', 'Croatia', 'Bosnia', 'Bulgaria', 'Macedonia', 'Hungary', 'Romania', 'Malta', 'Portugal', 'Iceland', 'Belorussia', 'Lithuania', 'Latvia', 'Estonian', 'Denmark', 'Monaco', 'Belgium', 'Luxembourg', 'Albania', 'San Marino', 'Vatican', 'Liechtenstein', 'Ukraine', 'Kosovo', 'Cyprus'];

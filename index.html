@@ -77,7 +77,7 @@
                     <article>
                         <h3 class="white padding-bot">Instruccions to play:</h3>
                         <ul class="padding-bot">
-                            <li>The playe has 1 minute to memorize the highest countries.</li>
+                            <li>The player has 1 minute to memorize the highest countries.</li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                             <li>In vel purus tincidunt, porta metus a, condimentum nisl.</li>
                             <li>Duis iaculis dolor eu tortor varius lobortis in et tellus.</li>
@@ -96,31 +96,45 @@
     <!---------------------------------- SOLVE PAGE ---------------------------------->
     <div id="solve-page" class="maps">
         <main>
-            <h2 class="header-2"></h2>
-            <div>
+            <div class="europe-map map-picture padding-onevx">
                 <img src=" " id="country-picture">
 
             </div>
 
-            <div id="solutions">
-                <div>Your score is: <span id="score"></span></div>
+            <div class="counter-zone padding-onevx">
+                <div class="top-counter">
+                    <div class="countdown">
+                        <h3>Countdown</h3>
+                        <div class="seconds">
+                            <span id="secDec" class="number">0</span>
+                            <span id="secUni" class="number">0</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div id="posible-solutions">
+                    <article>
+                        <h3 class="white padding-bot">Countries:</h3>
 
-            </div>
+                    </article>
+                </div>
 
-            <button id="restart">RESTART</button>
+                <div class="bottom-buttons">
+                    <button id="back2">BACK  <i class="fa-light fa-circle-play"></i></button>
+
+                </div>
         </main>
-    </div>
-    <!---------------------------------- LOSE PAGE ---------------------------------->
-    <div id="lose-page">
-        <main>
-            <h1>YOU LOSE SUCKER</h1>
-        </main>
+        </div>
+        <!---------------------------------- LOSE PAGE ---------------------------------->
+        <div id="lose-page">
+            <main>
+                <h1>YOU LOSE SUCKER</h1>
+            </main>
 
-    </div>
-    <script src="js/assets.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/scripts.js"></script>
+        </div>
+        <script src="js/assets.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>
