@@ -189,32 +189,23 @@ class Game {
         this.points = 0;
     }
 
- 
-
-
-
-/*
      //_hideLearningPage // set timeout en 5 s i console.log 
-     
      _hideLearningPage() {
-    
-        setTimeout(() => { this._showSolvingPage() }, 60000);
+        setTimeout(() => { this._showSolvingPage() }, 6000);
         this._chronometerLearn();
-       
     }
-
-*/  
-
+/*
     _hideLearningPage() {
         if(document.getElementById('play').clicked == false) {
             setTimeout(() => { this._showSolvingPage() }, 6000);
         this._chronometerLearn();
         }
         else {
-            return this._showSolvingPage;
+            this._showSolvingPage;
         }
         console.log("hello")
     }
+    */  
 
     _chronometerLearn() {
        const intervalId = setInterval(() => {
@@ -224,16 +215,6 @@ class Game {
          let counter = 6;
          setTimeout(()=> {clearInterval(intervalId)}, 6000); 
     }
-
-    _chronometerSolve() {
-        const intervalId = setInterval(() => {
-         document.getElementById('secUni').innerText = counter;
-         counter -= 1;
-          },1000 );  
-          let counter = 6;
-          setTimeout(()=> {clearInterval(intervalId)}, 6000); 
-     }
-
 
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
@@ -251,10 +232,6 @@ class Game {
     //Save all countries pictures in an array.
 
     _showRandomElement() {
-
-
-
-
         const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
        this.displayedMap = countryMap;
        return document.getElementById('country-picture').src = countryMap.src;
@@ -275,10 +252,23 @@ class Game {
                 solutions.appendChild(breakLine);
             }
         });
-
-        // agafa l'array de assets europeanCountries.forEach(contry => createelement('button'), button.innertext = country; responses.appendchild(btn))
-        // assigna un onclick a cada botó i aquest onclick crida a checkAnswer amb el paísque hem clicat
     }
+
+    _playTimeCounter() {
+        setTimeout(() => { this.losePage() }, 30000);
+        this._chronometerSolve();
+    }
+
+    _chronometerSolve() {
+        const intervalId = setInterval(() => {
+         document.getElementById('minuts').innerText = counter;
+         counter -= 1;
+          },30000 );  
+          let counter = 50;
+          setTimeout(()=> {clearInterval(intervalId)}, 30000); 
+    }
+
+
 
     _showWin() {
         alert("You rock!!")
@@ -298,14 +288,11 @@ class Game {
             }
             else if (this.points >= 40){
                 this._showWin();
-            }
-            //else if (this.points < 40){
-            //    this._showLose();
-            //} 
-        }
+            } 
             else {
             this.points -= 0.5;
             }
+        }
         document.getElementById('score-points').innerText = this.points;
     }
     start() {

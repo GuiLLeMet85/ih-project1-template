@@ -239,8 +239,8 @@ h3 {
 li {
     color: white;
     list-style: none;
-    font-size: 1.25em;
-    padding: 1.5vh 1.5vw;
+    font-size: 1.05em;
+    padding: 1.5vh .5vw;
     font-weight: 300;
 }
 
@@ -490,6 +490,8 @@ button:hover:after {
 
 .number {
     font-size: 0.9rem;
+    padding: 2px;
+    color: red;
 }
 
 #posible-solutions {

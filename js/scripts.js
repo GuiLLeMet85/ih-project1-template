@@ -6,11 +6,13 @@ window.onload = function() {
     const playButton = document.getElementById('play');
     const backButton = document.getElementById('back');
     const backButtonLearn = document.getElementById('back2');
+    const losePage = document.getElementById('lose-page');
 
     startButton.onclick = function() {
         startPage.style = "display: none";
         learnPage.style = "display: flex";
         solvePage.style = "display: none";
+        losePage.style = "display: none";
         const game = new Game();
         game.start();
     }
