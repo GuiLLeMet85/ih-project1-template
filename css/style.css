@@ -294,7 +294,7 @@ button#start {
 }
 
 #posible-solutions button{
-    width: 120px;
+    width: 125px;
     font-size: 0.7rem;
      
 }
@@ -409,11 +409,16 @@ button:hover:after {
     }
 }
 
-/* learn page */
+/* learn page & solve page */
 
 .top-counter {
     margin: 1vh 0;
     height: 10%;
+}
+
+.points {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #learn-page .counter-zone {
@@ -443,6 +448,15 @@ button:hover:after {
     letter-spacing: 0.04em;
 }
 
+#score-total {
+    padding: 0 1vw;
+}
+
+#score-points {
+    padding: 0 1vw;
+    margin-left: -1.5vw;
+}
+
 #solve-page .top-counter {
     display: flex;
     flex-direction: row;
@@ -453,7 +467,6 @@ button:hover:after {
     display: flex;
     justify-content: space-between;
 }
-
 
 
 #instructions {

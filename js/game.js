@@ -189,14 +189,34 @@ class Game {
         this.points = 0;
     }
 
+ 
 
-    //_hideLearningPage // set timeout en 5 s i console.log 
-    _hideLearningPage() {
-        setTimeout(() => { this._showSolvingPage() }, 6000);
-        this._chronometer();
+
+
+/*
+     //_hideLearningPage // set timeout en 5 s i console.log 
+     
+     _hideLearningPage() {
+    
+        setTimeout(() => { this._showSolvingPage() }, 60000);
+        this._chronometerLearn();
+       
     }
 
-    _chronometer() {
+*/  
+
+    _hideLearningPage() {
+        if(document.getElementById('play').clicked == false) {
+            setTimeout(() => { this._showSolvingPage() }, 6000);
+        this._chronometerLearn();
+        }
+        else {
+            return this._showSolvingPage;
+        }
+        console.log("hello")
+    }
+
+    _chronometerLearn() {
        const intervalId = setInterval(() => {
         document.getElementById('secUni').innerText = counter;
         counter -= 1;
@@ -204,6 +224,17 @@ class Game {
          let counter = 6;
          setTimeout(()=> {clearInterval(intervalId)}, 6000); 
     }
+
+    _chronometerSolve() {
+        const intervalId = setInterval(() => {
+         document.getElementById('secUni').innerText = counter;
+         counter -= 1;
+          },1000 );  
+          let counter = 6;
+          setTimeout(()=> {clearInterval(intervalId)}, 6000); 
+     }
+
+
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
@@ -220,6 +251,10 @@ class Game {
     //Save all countries pictures in an array.
 
     _showRandomElement() {
+
+
+
+
         const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
        this.displayedMap = countryMap;
        return document.getElementById('country-picture').src = countryMap.src;
@@ -227,7 +262,7 @@ class Game {
 
     _printSolutions() {
         const solutions = document.getElementById('posible-solutions');
-        arrayEuroCountries.forEach((country, i) => {
+        arrayEuroCountriesSort.forEach((country, i) => {
             let button = document.createElement('button');
             button.innerText = country;
             button.onclick = () => {
@@ -271,9 +306,7 @@ class Game {
             else {
             this.points -= 0.5;
             }
-        
-        
-        document.getElementById('score').innerText = this.points;
+        document.getElementById('score-points').innerText = this.points;
     }
     start() {
         this._hideLearningPage();
@@ -282,9 +315,8 @@ class Game {
     play() {
         const playButton = document.getElementById('play');
         this._showSolvingPage();
-        this._showRandomElement();
-        this._printSolutions();
     }
+
 
     back() {
 
