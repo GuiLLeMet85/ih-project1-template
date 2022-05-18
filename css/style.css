@@ -432,7 +432,7 @@ button:hover:after {
     flex-direction: row;
 }
 
-.countdown {
+.countdown, .countscore {
     margin: 1vh 0;
     padding: 0.8em 2.2em;
     cursor: pointer;
@@ -443,8 +443,15 @@ button:hover:after {
     letter-spacing: 0.04em;
 }
 
-#solve-page .countdown, #solve-page .countdown {
-    width: 50%;
+#solve-page .top-counter {
+    display: flex;
+    flex-direction: row;
+}
+
+#solve-page .countdown, #solve-page .countscore {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
 }
 
 

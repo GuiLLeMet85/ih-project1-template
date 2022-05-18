@@ -124,8 +124,8 @@ class Game {
                 solution: 'Iceland',
                 points: 2
             }, {
-                src: '/img/belorussia.png',
-                solution: 'Belorussia',
+                src: '/img/belarus.png',
+                solution: 'Belarus',
                 points: 2
             }, {
                 src: '/img/lithuania.png',
