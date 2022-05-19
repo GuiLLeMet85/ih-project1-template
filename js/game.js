@@ -61,7 +61,7 @@ class Game {
                 points: 2
             }, {
                 src: '/img/czech-republic.png',
-                solution: 'Czech Republic',
+                solution: 'Czech Rep.',
                 points: 2
             }, {
                 src: '/img/greece.png',
@@ -284,15 +284,12 @@ class Game {
             this._showRandomElement();
             if (this.points >= 70) {
                 this._showWin();
-
-            }
-            else if (this.points >= 40){
+            } else if (this.points >= 40){
                 this._showWin();
             } 
-            else {
+         } else {
             this.points -= 0.5;
             }
-        }
         document.getElementById('score-points').innerText = this.points;
     }
     start() {
