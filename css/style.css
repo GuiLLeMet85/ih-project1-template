@@ -71,6 +71,7 @@ details {
     vertical-align: baseline;
 }
 
+
 /* Basic styles, change according to your style */
 
 html {
@@ -165,8 +166,12 @@ article {
 }
 
 #country-picture {
-    width: 50%;
+    border-radius: 5px;
+    width: 60%;
+    padding: 4vh 4vw;
+    background-color: cyan;
 }
+
 
 /* Auxiliar classes */
 
@@ -177,6 +182,7 @@ article {
 .shown {
     display: flex;
 }
+
 
 /* ------- Maps ---------- */
 
@@ -205,7 +211,6 @@ article {
     width: 50%;
 }
 
-
 .map-picture:hover {
     transform: scale(1.3);
 }
@@ -215,6 +220,7 @@ article {
     transform-origin: 65% 75%;
     transition: transform 4s, filter .5s ease-out;
 }
+
 
 /* Basic styles, change according to your style */
 
@@ -249,6 +255,7 @@ span {
     display: block;
 }
 
+
 /* Colors style */
 
 .white {
@@ -259,6 +266,7 @@ span {
     color: black;
 }
 
+
 /* Paddings style */
 
 .padding-bot {
@@ -268,6 +276,7 @@ span {
 .padding-onevx {
     padding: 1vh 1vw;
 }
+
 
 /* Buttons style */
 
@@ -293,10 +302,9 @@ button#start {
     background-color: cyan;
 }
 
-#posible-solutions button{
+#posible-solutions button {
     width: 125px;
     font-size: 0.7rem;
-     
 }
 
 button {
@@ -409,6 +417,7 @@ button:hover:after {
     }
 }
 
+
 /* learn page & solve page */
 
 .top-counter {
@@ -437,7 +446,8 @@ button:hover:after {
     flex-direction: row;
 }
 
-.countdown, .countscore {
+.countdown,
+.countscore {
     margin: 1vh 0;
     padding: 0.8em 2.2em;
     cursor: pointer;
@@ -462,12 +472,12 @@ button:hover:after {
     flex-direction: row;
 }
 
-#solve-page .countdown, #solve-page .countscore {
+#solve-page .countdown,
+#solve-page .countscore {
     width: 45%;
     display: flex;
     justify-content: space-between;
 }
-
 
 #instructions {
     width: 100%;
@@ -502,4 +512,4 @@ button:hover:after {
 
 .breakLine {
     height: 10px;
-} 
+}
