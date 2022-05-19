@@ -156,13 +156,19 @@ article {
     transform: scale(1.25);
     padding: 2vh 1vw;
 }
+#video-solve { 
+    position: fixed;
+
+}
 
 #learn-page main,
 #solve-page main {
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content: center;
     width: 95%;
+    align-items: center;
 }
 
 #country-picture {
@@ -186,9 +192,6 @@ article {
 
 /* ------- Maps ---------- */
 
-.map-screen {
-    background-color: red;
-}
 
 .europe-map {
     transform: scale(.9);
@@ -266,6 +269,10 @@ span {
     color: black;
 }
 
+.red {
+    color: #FF1731;
+}
+
 
 /* Paddings style */
 
@@ -305,6 +312,7 @@ button#start {
 #posible-solutions button {
     width: 125px;
     font-size: 0.7rem;
+    margin: 0.5vh 0.5vw;
 }
 
 button {
@@ -470,11 +478,13 @@ button:hover:after {
 #solve-page .top-counter {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #solve-page .countdown,
 #solve-page .countscore {
-    width: 45%;
+    width: 65%;
     display: flex;
     justify-content: space-between;
 }
@@ -507,7 +517,7 @@ button:hover:after {
 #posible-solutions {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .breakLine {
