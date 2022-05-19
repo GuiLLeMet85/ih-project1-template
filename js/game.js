@@ -1,240 +1,27 @@
+class Map {
+    constructor(src, solution, points) {
+        this.src = src;
+        this.solution = solution;
+        this.points = points;
+    }
+}
+
 class Game {
     constructor() {
-        this.currentMap = [{
-                src: '/img/france.png',
-                solution: 'France',
-                points: 1,
-                status: 'pending'
-            },
-            {
-                src: '/img/norway.png',
-                solution: 'Norway',
-                points: 1,
-                status: 'pending'
-            },
-            {
-                src: '/img/sweden.png',
-                solution: 'Sweden',
-                points: 1,
-                status: 'pending'
-            },
-            {
-                src: '/img/germany.png',
-                solution: 'Germany',
-                points: 1,
-                status: 'pending'
-            },
-            {
-                src: '/img/spain.png',
-                solution: 'Spain',
-                points: 1,
-                status: 'pending'
-            },
-            {
-                src: '/img/italy.png',
-                solution: 'Italy',
-                points: 1,
-                status: 'pending'
-            },
-            {
-                src: '/img/andorra.png',
-                solution: 'Andorra',
-                points: 2,
-                status: 'pending'
-            },
-            {
-                src: '/img/netherlands.png',
-                solution: 'Netherlands',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/uk.png',
-                solution: 'United Kingdom',
-                points: 1
-            }, {
-                src: '/img/ireland.png',
-                solution: 'Ireland',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/poland.png',
-                solution: 'Poland',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/switzerland.png',
-                solution: 'Switzerland',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/finland.png',
-                solution: 'Finland',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/czech-republic.png',
-                solution: 'Czech Rep.',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/greece.png',
-                solution: 'Greece',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/austria.png',
-                solution: 'Austria',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/slovakia.png',
-                solution: 'Slovakia',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/slovenia.png',
-                solution: 'Slovenia',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/montenegro.png',
-                solution: 'Montenegro',
-                points: 3,
-                status: 'pending'
-            }, {
-                src: '/img/serbia.png',
-                solution: 'Serbia',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/croatia.png',
-                solution: 'Croatia',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/bosnia.png',
-                solution: 'Bosnia',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/bulgaria.png',
-                solution: 'Bulgaria',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/macedonia.png',
-                solution: 'Macedonia',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/hungary.png',
-                solution: 'Hungary',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/romania.png',
-                solution: 'Romania',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/malta.png',
-                solution: 'Malta',
-                points: 3,
-                status: 'pending'
-            }, {
-                src: '/img/portugal.png',
-                solution: 'Portugal',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/iceland.png',
-                solution: 'Iceland',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/belarus.png',
-                solution: 'Belarus',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/lithuania.png',
-                solution: 'Lithuania',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/latvia.png',
-                solution: 'Latvia',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/estonian.png',
-                solution: 'Estonian',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/denmark.png',
-                solution: 'Denmark',
-                points: 1,
-                status: 'pending'
-            }, {
-                src: '/img/monaco.png',
-                solution: 'Monaco',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/belgium.png',
-                solution: 'Belgium',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/luxembourg.png',
-                solution: 'Luxembourg',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/albania.png',
-                solution: 'Albania',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/san-marino.png',
-                solution: 'San Marino',
-                points: 3,
-                status: 'pending'
-            }, {
-                src: '/img/vatican.png',
-                solution: 'Vatican',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/liechtenstein.png',
-                solution: 'Liechtenstein',
-                points: 3,
-                status: 'pending'
-            }, {
-                src: '/img/ukraine.png',
-                solution: 'Ukraine',
-                points: 2,
-                status: 'pending'
-            }, {
-                src: '/img/kosovo.png',
-                solution: 'Kosovo',
-                points: 3,
-                status: 'pending'
-            }, {
-                src: '/img/cyprus.png',
-                solution: 'Cyprus',
-                points: 3,
-                status: 'pending'
-            }
-        ]
+        this.allMaps = [];
         this.displayedMap = undefined;
         this.points = 0;
+    }
+    createMaps() {
+        arrayCountryInfo.forEach((map)=> {
+            let newMap = new Map(map.src, map.solution, map.points);
+            this.allMaps.push(newMap);
+        });
     }
 
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage() {
-            setTimeout(() => { this._showSolvingPage() }, 6000);
+            setTimeout(() => { this._showSolvingPage() }, 4000);
             this._chronometerLearn();
         }
         /*
@@ -255,10 +42,9 @@ class Game {
             document.getElementById('secUni').innerText = counter;
             counter -= 1;
         }, 1000);
-        let counter = 6;
-        setTimeout(() => { clearInterval(intervalId) }, 6000);
+        let counter = 4;
+        setTimeout(() => { clearInterval(intervalId) }, 4000);
     }
-
 
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
@@ -275,15 +61,15 @@ class Game {
     //Save all countries pictures in an array.
     /*
         _showPendingCountries() {
-            const countryPending = this.currentMap.status
+            const countryPending = this.allMaps.status
 
         }
     */
 
     _showRandomElement() {
-        const countryMap = this.currentMap[Math.floor(Math.random() * this.currentMap.length)];
+        const countryMap = this.allMaps[Math.floor(Math.random() * this.allMaps.length)];
         this.displayedMap = countryMap;
-        return document.getElementById('country-picture').src = countryMap.src;
+        document.getElementById('country-picture').src = countryMap.src;
     }
 
     _printSolutions() {
@@ -318,25 +104,47 @@ class Game {
         setTimeout(() => { clearInterval(intervalId) }, 30000);
     }
 
-
-    _checkAnswer(country) {
+   /* _checkAnswer(country) {
         if (this.displayedMap.solution == country) {
             this.points += this.displayedMap.points;
-            this.currentMap.slice(this.displayedMap);
+            this.allMaps.slice(this.displayedMap);
             this._showRandomElement();
-            if (this.points >= 70) {
+            if (this.points >= 10) {
                 this._showWin();
-            } else if (this.points >= 40) {
-                this._showWin();
+            } else {
+                this.points -= 0.5;
             }
-        } else {
-            this.points -= 0.5;
         }
         document.getElementById('score-points').innerText = this.points;
     }
 
+    */
+
+    _checkAnswer(country) {
+        if (this.displayedMap.solution == country) {
+            this.points += this.displayedMap.points;
+            this.allMaps.slice(this.displayedMap);
+            this._showRandomElement();
+            if (this.points >= 10) {
+                this._showWin();
+            }
+            else {
+
+            } 
+           }
+            
+            else {
+                this.points -= 0.5;
+            } 
+        document.getElementById('score-points').innerText = this.points;
+    }
+
+
+
+
     start() {
         this._hideLearningPage();
+        this.createMaps();
     }
 
     play() {
@@ -344,13 +152,13 @@ class Game {
         this._showSolvingPage();
     }
 
-
     _showWin() {
         alert("You rock!!")
+        // document.getelementbyloquesiguide lapagina de joc i display none
+        //document.getelementalksdjalksdj la pagina de wuin i display: block
     }
 
     _showLose() {
         alert("You need to study!")
     }
-
 }
