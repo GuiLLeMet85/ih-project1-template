@@ -5,34 +5,34 @@ class Game {
         this.points = 0;
     }
     createMaps() {
-        arrayCountryInfo.forEach((map)=> {
+        arrayCountryInfo.forEach((map) => {
             let newMap = new Map(map.src, map.solution, map.points);
             this.allMaps.push(newMap);
         });
     }
-    
+
 
     //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage(onlyShowOnce) {
-        
-            setTimeout(() => { this._showSolvingPage() }, 4000);
+
+        setTimeout(() => { this._showSolvingPage() }, 4000);
+        this._chronometerLearn();
+        console.log("hello")
+    }
+
+
+    /*
+        _hideLearningPage() {
+            if(document.getElementById('play').clicked == false) {
+                setTimeout(() => { this._showSolvingPage() }, 6000);
             this._chronometerLearn();
+            }
+            else {
+                this._showSolvingPage;
+            }
             console.log("hello")
         }
-
-
-        /*
-            _hideLearningPage() {
-                if(document.getElementById('play').clicked == false) {
-                    setTimeout(() => { this._showSolvingPage() }, 6000);
-                this._chronometerLearn();
-                }
-                else {
-                    this._showSolvingPage;
-                }
-                console.log("hello")
-            }
-            */
+        */
 
     _chronometerLearn() {
         const intervalId = setInterval(() => {
@@ -44,17 +44,17 @@ class Game {
     }
 
     _onlyShowOnce() {
-    const something = (function() {
-        const executed = false;
-        return function() {
-            if (!executed) {
-                executed = true;
-                // do something
-            }
-        };
-    })();
-    something(); // "do something" happens
-    something(); // nothing happens
+        const something = (function() {
+            const executed = false;
+            return function() {
+                if (!executed) {
+                    executed = true;
+                    // do something
+                }
+            };
+        })();
+        something(); // "do something" happens
+        something(); // nothing happens
 
     }
 
@@ -117,18 +117,16 @@ class Game {
             this._showRandomElement();
             if (this.points >= 10) {
                 this._showWin();
-            }
-            else {
+            } else {
 
-            } 
+            }
+        } else {
+            this.points -= 0.5;
         }
-            else {
-                this.points -= 0.5;
-            } 
         document.getElementById('score-points').innerText = this.points;
     }
 
-   /* reloadButton() {
+    /* reloadButton() {
         const backToInitial = document.getElementById('backToInitial');
         const startPage = document.getElementById('start-page');
         startPage.style = "display: block";
@@ -157,7 +155,7 @@ class Game {
         const solvePage = document.getElementById('solve-page');
         solvePage.style = "display: none";
         const winnerPage = document.getElementById('winner-page');
-        winnerPage.style = "display: block";
+        winnerPage.style = "display: flex";
     }
 
     _showLose() {

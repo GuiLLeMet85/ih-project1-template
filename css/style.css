@@ -132,6 +132,13 @@ article {
     display: none;
 }
 
+#winner-page {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
 .box-title-intro {
     color: white;
     position: relative;
@@ -184,6 +191,9 @@ article {
 
 .content-winner {
     z-index: 1;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
 }
 
 #country-picture {
@@ -253,6 +263,11 @@ h1 {
 
 h2 {
     font-size: 3rem;
+}
+
+#winner-page h2 {
+    font-size: 4rem;
+    margin: 2vh 2vw;
 }
 
 h3 {
@@ -520,6 +535,14 @@ button:hover:after {
     justify-content: space-around;
     margin: 1vh 0;
     height: 10%;
+}
+
+#winner-page .bottom-buttons {
+    margin: 5vh 0;
+}
+
+#winner-page button {
+    width: 250px;
 }
 
 .number {
