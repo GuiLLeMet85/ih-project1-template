@@ -100,6 +100,11 @@ body {
     border-radius: 6em/8em;
     overflow: hidden;
     padding: 2vh 2vw;
+    border-color: white;
+    border-style: dashed double none;
+    border-width: 10px;
+    -webkit-box-shadow: 8px -3px 23px 15px rgba(0, 0, 0, 0.66);
+    box-shadow: 8px -3px 23px 15px rgba(0, 0, 0, 0.66);
 }
 
 article {
@@ -115,12 +120,9 @@ article {
 #start-page,
 #learn-page,
 #intructions-page,
-#solve-page {
-    background-color: black;
-}
-
+#solve-page,
 #winner-page {
-    background-color: darkgrey;
+    background-color: black;
 }
 
 #learn-page,
@@ -156,19 +158,32 @@ article {
     transform: scale(1.25);
     padding: 2vh 1vw;
 }
-#video-solve { 
-    position: fixed;
 
+#video-solve {
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
 }
 
 #learn-page main,
-#solve-page main {
+#solve-page main,
+#winner-page main {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
     width: 95%;
     align-items: center;
+}
+
+#winner-page main {
+    overflow: hidden;
+}
+
+.content-winner {
+    z-index: 1;
 }
 
 #country-picture {
@@ -191,7 +206,6 @@ article {
 
 
 /* ------- Maps ---------- */
-
 
 .europe-map {
     transform: scale(.9);
