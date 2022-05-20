@@ -1,11 +1,3 @@
-class Map {
-    constructor(src, solution, points) {
-        this.src = src;
-        this.solution = solution;
-        this.points = points;
-    }
-}
-
 class Game {
     constructor() {
         this.allMaps = [];
@@ -18,12 +10,17 @@ class Game {
             this.allMaps.push(newMap);
         });
     }
+    
 
     //_hideLearningPage // set timeout en 5 s i console.log 
-    _hideLearningPage() {
+    _hideLearningPage(onlyShowOnce) {
+        
             setTimeout(() => { this._showSolvingPage() }, 4000);
             this._chronometerLearn();
+            console.log("hello")
         }
+
+
         /*
             _hideLearningPage() {
                 if(document.getElementById('play').clicked == false) {
@@ -46,6 +43,21 @@ class Game {
         setTimeout(() => { clearInterval(intervalId) }, 4000);
     }
 
+    _onlyShowOnce() {
+    const something = (function() {
+        const executed = false;
+        return function() {
+            if (!executed) {
+                executed = true;
+                // do something
+            }
+        };
+    })();
+    something(); // "do something" happens
+    something(); // nothing happens
+
+    }
+
     // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
         const startPage = document.getElementById('start-page');
@@ -54,17 +66,11 @@ class Game {
         learnPage.style = "display: none";
         const solvePage = document.getElementById('solve-page');
         solvePage.style = "display: flex";
+        const winnerPage = document.getElementById('winner-page');
+        winnerPage.style = "display: none";
         this._showRandomElement();
         this._printSolutions();
     }
-
-    //Save all countries pictures in an array.
-    /*
-        _showPendingCountries() {
-            const countryPending = this.allMaps.status
-
-        }
-    */
 
     _showRandomElement() {
         const countryMap = this.allMaps[Math.floor(Math.random() * this.allMaps.length)];
@@ -104,22 +110,6 @@ class Game {
         setTimeout(() => { clearInterval(intervalId) }, 30000);
     }
 
-   /* _checkAnswer(country) {
-        if (this.displayedMap.solution == country) {
-            this.points += this.displayedMap.points;
-            this.allMaps.slice(this.displayedMap);
-            this._showRandomElement();
-            if (this.points >= 10) {
-                this._showWin();
-            } else {
-                this.points -= 0.5;
-            }
-        }
-        document.getElementById('score-points').innerText = this.points;
-    }
-
-    */
-
     _checkAnswer(country) {
         if (this.displayedMap.solution == country) {
             this.points += this.displayedMap.points;
@@ -131,17 +121,28 @@ class Game {
             else {
 
             } 
-           }
-            
+        }
             else {
                 this.points -= 0.5;
             } 
         document.getElementById('score-points').innerText = this.points;
     }
 
+   /* reloadButton() {
+        const backToInitial = document.getElementById('backToInitial');
+        const startPage = document.getElementById('start-page');
+        startPage.style = "display: block";
+        const learnPage = document.getElementById('learn-page');
+        learnPage.style = "display: none";
+        const solvePage = document.getElementById('solve-page');
+        solvePage.style = "display: none";
+        const winnerPage = document.getElementById('winner-page');
+        winnerPage.style = "display: none";
 
-
-
+        this__hideLearningPage.clearInterval();
+        console.log("hola")
+    }
+*/
     start() {
         this._hideLearningPage();
         this.createMaps();
@@ -153,9 +154,10 @@ class Game {
     }
 
     _showWin() {
-        alert("You rock!!")
-        // document.getelementbyloquesiguide lapagina de joc i display none
-        //document.getelementalksdjalksdj la pagina de wuin i display: block
+        const solvePage = document.getElementById('solve-page');
+        solvePage.style = "display: none";
+        const winnerPage = document.getElementById('winner-page');
+        winnerPage.style = "display: block";
     }
 
     _showLose() {

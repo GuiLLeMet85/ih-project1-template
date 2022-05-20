@@ -89,7 +89,7 @@ body {
 
 #start-page,
 #intructions-page,
-#lose-page,
+#winner-page,
 #learn-page,
 #solve-page {
     height: 90vh;
@@ -119,14 +119,14 @@ article {
     background-color: black;
 }
 
-#lose-page {
+#winner-page {
     background-color: darkgrey;
 }
 
 #learn-page,
 #intructions-page,
 #solve-page,
-#lose-page {
+#winner-page {
     display: none;
 }
 

@@ -6,25 +6,26 @@ window.onload = function() {
     const playButton = document.getElementById('play');
     const backButton = document.getElementById('back');
     const backButtonLearn = document.getElementById('back2');
-    const losePage = document.getElementById('lose-page');
+    const winnerPage = document.getElementById('winner-page');
+    const backToInitialButton= document.getElementById('backToInitial');
 
     startButton.onclick = function() {
         startPage.style = "display: none";
         learnPage.style = "display: flex";
         solvePage.style = "display: none";
-        losePage.style = "display: none";
+        winnerPage.style = "display: none";
         const game = new Game();
         game.start();
     }
 
-    /*playButton.onclick = function() {
+        playButton.onclick = function() {
         startPage.style = "display: none";
         learnPage.style = "display: none";
         solvePage.style = "display: flex";
         const game = new Game();
         game.start();
     }
-*/
+
     backButton.onclick = function() {
         startPage.style = "display: block";
         learnPage.style = "display: none";
@@ -37,6 +38,15 @@ window.onload = function() {
         startPage.style = "display: none";
         learnPage.style = "display: flex";
         solvePage.style = "display: none";
+        const game = new Game();
+        game.start();
+    }
+
+    backToInitialButton.onclick=function() {
+        startPage.style = "display: block";
+        learnPage.style = "display: none";
+        solvePage.style = "display: none";
+        winnerPage.style = "display: none";
         const game = new Game();
         game.start();
     }
