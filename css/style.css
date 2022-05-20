@@ -235,7 +235,7 @@ article {
 }
 
 #solve-page .map-picture {
-    width: 50%;
+    width: 40%;
 }
 
 .map-picture:hover {
@@ -285,6 +285,10 @@ li {
 span {
     mix-blend-mode: none;
     display: block;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -473,7 +477,7 @@ button:hover:after {
 }
 
 #solve-page .counter-zone {
-    width: 50%;
+    width: 60%;
     z-index: 1;
 }
 
