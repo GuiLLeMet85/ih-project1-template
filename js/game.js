@@ -10,55 +10,22 @@ class Game {
             this.allMaps.push(newMap);
         });
     }
-
-
-    //_hideLearningPage // set timeout en 5 s i console.log 
     _hideLearningPage(onlyShowOnce) {
 
-        setTimeout(() => { this._showSolvingPage() }, 4000);
+        setTimeout(() => { this._showSolvingPage() }, 9000);
         this._chronometerLearn();
         console.log("hello")
     }
-
-
-    /*
-        _hideLearningPage() {
-            if(document.getElementById('play').clicked == false) {
-                setTimeout(() => { this._showSolvingPage() }, 6000);
-            this._chronometerLearn();
-            }
-            else {
-                this._showSolvingPage;
-            }
-            console.log("hello")
-        }
-        */
 
     _chronometerLearn() {
         const intervalId = setInterval(() => {
             document.getElementById('secUni').innerText = counter;
             counter -= 1;
         }, 1000);
-        let counter = 4;
-        setTimeout(() => { clearInterval(intervalId) }, 4000);
+        let counter = 9;
+        setTimeout(() => { clearInterval(intervalId) }, 9000);
     }
 
-    _onlyShowOnce() {
-        const something = (function() {
-            const executed = false;
-            return function() {
-                if (!executed) {
-                    executed = true;
-                    // do something
-                }
-            };
-        })();
-        something(); // "do something" happens
-        something(); // nothing happens
-
-    }
-
-    // seleccionar pagina que amagarem i seleccionar pagina que mostrarem
     _showSolvingPage() {
         const startPage = document.getElementById('start-page');
         startPage.style = "display: none";
@@ -126,29 +93,9 @@ class Game {
         document.getElementById('score-points').innerText = this.points;
     }
 
-    /* reloadButton() {
-        const backToInitial = document.getElementById('backToInitial');
-        const startPage = document.getElementById('start-page');
-        startPage.style = "display: block";
-        const learnPage = document.getElementById('learn-page');
-        learnPage.style = "display: none";
-        const solvePage = document.getElementById('solve-page');
-        solvePage.style = "display: none";
-        const winnerPage = document.getElementById('winner-page');
-        winnerPage.style = "display: none";
-
-        this__hideLearningPage.clearInterval();
-        console.log("hola")
-    }
-*/
     start() {
         this._hideLearningPage();
         this.createMaps();
-    }
-
-    play() {
-        const playButton = document.getElementById('play');
-        this._showSolvingPage();
     }
 
     _showWin() {
@@ -156,9 +103,5 @@ class Game {
         solvePage.style = "display: none";
         const winnerPage = document.getElementById('winner-page');
         winnerPage.style = "display: flex";
-    }
-
-    _showLose() {
-        alert("You need to study!")
     }
 }
