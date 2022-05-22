@@ -4,186 +4,186 @@ const arrayEuroCountriesSort = arrayEuroCountries.sort();
 
 const arrayCountryInfo = [
 {
-    src: '/img/france.png',
+    src: './img/france.png',
     solution: 'France',
     points: 1
 },
 {
-    src: '/img/norway.png',
+    src: './img/norway.png',
     solution: 'Norway',
     points: 1
 },
 {
-    src: '/img/sweden.png',
+    src: './img/sweden.png',
     solution: 'Sweden',
     points: 1
 },
 {
-    src: '/img/germany.png',
+    src: './img/germany.png',
     solution: 'Germany',
     points: 1
 },
 {
-    src: '/img/spain.png',
+    src: './img/spain.png',
     solution: 'Spain',
     points: 1
 },
 {
-    src: '/img/italy.png',
+    src: './img/italy.png',
     solution: 'Italy',
     points: 1
 },
 {
-    src: '/img/andorra.png',
+    src: './img/andorra.png',
     solution: 'Andorra',
     points: 2
 },
 {
-    src: '/img/netherlands.png',
+    src: './img/netherlands.png',
     solution: 'Netherlands',
     points: 1
 }, {
-    src: '/img/uk.png',
+    src: './img/uk.png',
     solution: 'United Kingdom',
     points: 1
 }, {
-    src: '/img/ireland.png',
+    src: './img/ireland.png',
     solution: 'Ireland',
     points: 2
 }, {
-    src: '/img/poland.png',
+    src: './img/poland.png',
     solution: 'Poland',
     points: 2
 }, {
-    src: '/img/switzerland.png',
+    src: './img/switzerland.png',
     solution: 'Switzerland',
     points: 2
 }, {
-    src: '/img/finland.png',
+    src: './img/finland.png',
     solution: 'Finland',
     points: 2
 }, {
-    src: '/img/czech-republic.png',
+    src: './img/czech-republic.png',
     solution: 'Czech Rep.',
     points: 2
 }, {
-    src: '/img/greece.png',
+    src: './img/greece.png',
     solution: 'Greece',
     points: 1
 }, {
-    src: '/img/austria.png',
+    src: './img/austria.png',
     solution: 'Austria',
     points: 1
 }, {
-    src: '/img/slovakia.png',
+    src: './img/slovakia.png',
     solution: 'Slovakia',
     points: 2
 }, {
-    src: '/img/slovenia.png',
+    src: './img/slovenia.png',
     solution: 'Slovenia',
     points: 2
 }, {
-    src: '/img/montenegro.png',
+    src: './img/montenegro.png',
     solution: 'Montenegro',
     points: 3
 }, {
-    src: '/img/serbia.png',
+    src: './img/serbia.png',
     solution: 'Serbia',
     points: 2
 }, {
-    src: '/img/croatia.png',
+    src: './img/croatia.png',
     solution: 'Croatia',
     points: 1
 }, {
-    src: '/img/bosnia.png',
+    src: './img/bosnia.png',
     solution: 'Bosnia',
     points: 2
 }, {
-    src: '/img/bulgaria.png',
+    src: './img/bulgaria.png',
     solution: 'Bulgaria',
     points: 1
 }, {
-    src: '/img/macedonia.png',
+    src: './img/macedonia.png',
     solution: 'Macedonia',
     points: 2
 }, {
-    src: '/img/hungary.png',
+    src: './img/hungary.png',
     solution: 'Hungary',
     points: 2
 }, {
-    src: '/img/romania.png',
+    src: './img/romania.png',
     solution: 'Romania',
     points: 1
 }, {
-    src: '/img/malta.png',
+    src: './img/malta.png',
     solution: 'Malta',
     points: 3
 }, {
-    src: '/img/portugal.png',
+    src: './img/portugal.png',
     solution: 'Portugal',
     points: 1
 }, {
-    src: '/img/iceland.png',
+    src: './img/iceland.png',
     solution: 'Iceland',
     points: 2
 }, {
-    src: '/img/belarus.png',
+    src: './img/belarus.png',
     solution: 'Belarus',
     points: 2
 }, {
-    src: '/img/lithuania.png',
+    src: './img/lithuania.png',
     solution: 'Lithuania',
     points: 2
 }, {
-    src: '/img/latvia.png',
+    src: './img/latvia.png',
     solution: 'Latvia',
     points: 2
 }, {
-    src: '/img/estonian.png',
+    src: './img/estonian.png',
     solution: 'Estonian',
     points: 2
 }, {
-    src: '/img/denmark.png',
+    src: './img/denmark.png',
     solution: 'Denmark',
     points: 1
 }, {
-    src: '/img/monaco.png',
+    src: './img/monaco.png',
     solution: 'Monaco',
     points: 2
 }, {
-    src: '/img/belgium.png',
+    src: './img/belgium.png',
     solution: 'Belgium',
     points: 2
 }, {
-    src: '/img/luxembourg.png',
+    src: './img/luxembourg.png',
     solution: 'Luxembourg',
     points: 2
 }, {
-    src: '/img/albania.png',
+    src: './img/albania.png',
     solution: 'Albania',
     points: 2
 }, {
-    src: '/img/san-marino.png',
+    src: './img/san-marino.png',
     solution: 'San Marino',
     points: 3
 }, {
-    src: '/img/vatican.png',
+    src: './img/vatican.png',
     solution: 'Vatican',
     points: 2
 }, {
-    src: '/img/liechtenstein.png',
+    src: './img/liechtenstein.png',
     solution: 'Liechtenstein',
     points: 3
 }, {
-    src: '/img/ukraine.png',
+    src: './img/ukraine.png',
     solution: 'Ukraine',
     points: 2
 }, {
-    src: '/img/kosovo.png',
+    src: './img/kosovo.png',
     solution: 'Kosovo',
     points: 3
 }, {
-    src: '/img/cyprus.png',
+    src: './img/cyprus.png',
     solution: 'Cyprus',
     points: 3
 }
