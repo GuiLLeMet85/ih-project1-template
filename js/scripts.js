@@ -18,30 +18,6 @@ window.onload = function() {
         game.start();
     }
 
-        playButton.onclick = function() {
-        startPage.style = "display: none";
-        learnPage.style = "display: none";
-        solvePage.style = "display: flex";
-        const game = new Game();
-        game.start();
-    }
-
-    backButton.onclick = function() {
-        startPage.style = "display: block";
-        learnPage.style = "display: none";
-        solvePage.style = "display: none";
-        const game = new Game();
-        game.start();
-    }
-    
-    backButtonLearn.onclick = function() {
-        startPage.style = "display: none";
-        learnPage.style = "display: flex";
-        solvePage.style = "display: none";
-        const game = new Game();
-        game.start();
-    }
-
     backToInitialButton.onclick=function() {
         startPage.style = "display: block";
         learnPage.style = "display: none";
