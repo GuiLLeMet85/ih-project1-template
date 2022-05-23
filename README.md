@@ -1,6 +1,6 @@
 # Game name
 
-[<img src="./img/pscreenshot-game.png">]
+<img src="./img/pscreenshot-game.png">
 
 ## Description
 
