@@ -1,6 +1,6 @@
 # Game name
 
-[<img src="./img/pscreenshot-game.pngage">]()
+[<img src="./img/pscreenshot-game.png">]
 
 ## Description
 
@@ -34,5 +34,5 @@ User can:
 
 <!-- When you finish, add these links and commit -->
 
-- [Presentation slides]()
-- [Deployed game]()
+- Presentation sliders: https://slides.com/guillemb/minimal)
+- Deployed game: https://guillemet85.github.io/ih-project1-template/
