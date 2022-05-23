@@ -14,7 +14,7 @@ class Game {
 
 
 
-    _hideLearningPage(onlyShowOnce) {
+    _hideLearningPage() {
         setTimeout(() => { this._showSolvingPage() }, 9000);
         this._chronometerLearn();
         console.log("hello")
@@ -46,23 +46,7 @@ class Game {
         const countryMap = this.allMaps[Math.floor(Math.random() * this.allMaps.length)];
         this.displayedMap = countryMap;
         document.getElementById('country-picture').src = countryMap.src;
-        e.view.removeEventListener(e.type, _showRandomElemen());
     }
-
-    _justOneTime() {
-        var something = (function(_printSolutions) {
-            var executed = false;
-            return function() {
-                if (!executed) {
-                    executed = true;
-                    // do something
-                }
-            };
-        })();
-        
-
-    }
-
 
     _printSolutions() {
         const solutions = document.getElementById('posible-solutions');
