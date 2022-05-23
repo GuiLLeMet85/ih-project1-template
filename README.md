@@ -34,5 +34,5 @@ User can:
 
 <!-- When you finish, add these links and commit -->
 
-- Presentation sliders: https://slides.com/guillemb/minimal)
+- Presentation sliders: https://slides.com/guillemb/minimal
 - Deployed game: https://guillemet85.github.io/ih-project1-template/
