@@ -11,9 +11,6 @@ class Game {
         });
     }
 
-
-
-
     _hideLearningPage(onlyShowOnce) {
         setTimeout(() => { this._showSolvingPage() }, 9000);
         this._chronometerLearn();
